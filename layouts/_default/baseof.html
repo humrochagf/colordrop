@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Site.Language.Lang }}">
+  <head>
+    {{ partial "meta.html" . }}
+
+    {{ block "jsonLD" . }}
+    {{ end }}
+
+    <!-- Page title -->
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+
+    <!-- styles -->
+    {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+  </head>
+
+  <body>
+    {{ partial "header.html" . }}
+    {{ partial "navigation.html" . }}
+
+    {{ block "main" . }}
+    {{ end }}
+  </body>
+</html>

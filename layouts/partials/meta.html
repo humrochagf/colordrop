@@ -1,0 +1,69 @@
+<!-- Required meta tags always come first -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+{{ if .Site.Params.gTagId }}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.gTagId }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ .Site.Params.gTagId }}');
+  </script>
+{{ end }}
+
+<!-- Favicons -->
+<link rel="icon" type="image/png" href="{{ "/img/favicon-32x32.png" | absURL }}" sizes="32x32" />
+<link rel="icon" type="image/png" href="{{ "/img/favicon-16x16.png" | absURL }}" sizes="16x16" />
+
+<!-- SEO tags -->
+<link rel="canonical" href="{{ "." | absURL }}" />
+
+{{ if .IsTranslated }}
+  {{ range .Translations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  {{ end }}
+{{ end }}
+
+<!-- General -->
+<meta name="description" content="{{ .Site.Params.description }}" />
+<meta name="author" content="{{ .Site.Params.author }}" />
+<meta name="theme-color" content="#ffffff" />
+
+<!-- Google+ -->
+<meta itemprop="name" content="{{ .Title }}" />
+<meta itemprop="description" content="{{ .Site.Params.description }}" />
+{{ if .Params.shareImage }}
+  <meta itemprop="image" content="{{ .Params.shareImage | absURL }}" />
+{{ else }}
+  <meta itemprop="image" content="{{ "/img/me-100x100.jpg" | absURL }}" />
+{{ end }}
+
+<!-- Facebook -->
+<meta property="og:site_name" content="{{ .Title }}" />
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="og:url" content="{{ '.' | absURL }}" />
+<meta property="og:type" content="article" />
+{{ if .Params.shareImage }}
+  <meta property="og:image" content="{{ .Params.shareImage | absURL }}" />
+{{ else }}
+  <meta property="og:image" content="{{ "/img/me-100x100.jpg" | absURL }}" />
+{{ end }}
+
+<!-- Twitter -->
+<meta name="twitter:url" content="{{ '.' | absURL }}" />
+<meta name="twitter:site" content="@{{ .Site.Params.twitter }}" />
+<meta name="twitter:creator" content="@{{ .Site.Params.twitter }}" />
+<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:description" content="{{ .Site.Params.description }}" />
+{{ if .Params.shareImage }}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="{{ .Params.shareImage | absURL }}" />
+{{ else }}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:image" content="{{ "/img/me-100x100.jpg" | absURL }}" />
+{{ end }}

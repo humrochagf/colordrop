@@ -1,0 +1,23 @@
+<header>
+  <div class="language-selector">
+    {{ if .IsTranslated }}
+      {{ range .Translations }}
+        <a class="language-item" href="{{ .Permalink }}">
+          {{ .Language.Lang }}
+        </a>
+      {{ end }}
+    {{ end }}
+  </div>
+
+  <div class="header-logo-container">
+    <a class="header-logo-link" href="{{ "/" | absURL }}">
+      <img class="header-logo-circle" src="{{ .Site.Params.siteLogo100 }}" alt="Header Logo">
+    </a>
+  </div>
+
+  <h1 class="header-title">
+    <a href="{{ "/" | absURL }}">
+      {{ .Site.Title }}
+    </a>
+  </h1>
+</header>

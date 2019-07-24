@@ -1,0 +1,12 @@
+// theme base preparation
+@import "fonts";
+@import "normalize";
+@import "reset";
+
+// variable overrides
+$theme-color: {{ default "#000000" .Site.Params.themeColor }};
+
+// theme styles
+@import "variables";
+@import "typography";
+@import "layout";

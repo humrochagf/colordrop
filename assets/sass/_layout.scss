@@ -1,0 +1,67 @@
+header, nav, main, article, footer {
+  margin: 0 auto;
+  width: 730px;
+
+  @media screen and (max-width: 730px) {
+    width: 100%;
+  }
+}
+
+header {
+  .language-selector {
+    text-align: right;
+    margin: 0 4rem;
+
+    .language-item {
+      display: inline-block;
+      background-color: $theme-color;
+      padding: 2rem 10rem 5rem 10rem;
+      border-bottom-left-radius: 8rem;
+      border-bottom-right-radius: 8rem;
+      font-weight: 800;
+      color: #ffffff;
+    }
+  }
+
+  .header-logo-container {
+    margin: 50rem auto 25rem;
+    width: 120rem;
+    height: 120rem;
+
+    .header-logo-circle {
+      border: 5rem solid $theme-color;
+      border-radius: 50%;
+      padding: 5rem;
+    }
+  }
+
+  .header-title {
+    margin: 10rem 0 5rem;
+    font-weight: 800;
+    font-size: 32rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
+
+nav {
+  text-align: center;
+  padding: 8rem 0;
+
+  a {
+    padding: 8rem 16rem;
+    border-bottom: 1rem solid lighten($theme-color, 60%);
+
+    &:hover, &:focus, &:active, &.active {
+      border-bottom: 1rem solid $theme-color;
+    }
+  }
+}
+
+main {
+  .site-description {
+    text-align: center;
+    margin: 80rem 0;
+    font-size: 16rem;
+  }
+}
