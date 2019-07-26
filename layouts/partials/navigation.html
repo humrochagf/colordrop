@@ -1,8 +1,12 @@
 <nav>
-  {{ $currentPage := . }}
-  {{ range .Site.Menus.main }}
-    <a href="{{ .URL | absLangURL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-      {{ .Name }}
-    </a>
-  {{ end }}
+  <div class="container">
+    <div class="site-navigation">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL | absLangURL }}" class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+          {{ .Name }}
+        </a>
+      {{ end }}
+    </div>
+  </div>
 </nav>

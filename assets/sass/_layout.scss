@@ -1,4 +1,4 @@
-header, nav, main, article, footer {
+.container {
   margin: 0 auto;
   width: 730px;
 
@@ -7,22 +7,22 @@ header, nav, main, article, footer {
   }
 }
 
-header {
-  .language-selector {
-    text-align: right;
-    margin: 0 4rem;
+.language-selector {
+  text-align: right;
+  margin: 0 4rem;
 
-    .language-item {
-      display: inline-block;
-      background-color: $theme-color;
-      padding: 2rem 10rem 5rem 10rem;
-      border-bottom-left-radius: 8rem;
-      border-bottom-right-radius: 8rem;
-      font-weight: 800;
-      color: #ffffff;
-    }
+  .language-item {
+    display: inline-block;
+    background-color: $theme-color;
+    padding: 2rem 10rem 5rem 10rem;
+    border-bottom-left-radius: 8rem;
+    border-bottom-right-radius: 8rem;
+    font-weight: 800;
+    color: #ffffff;
   }
+}
 
+.header-group {
   .header-logo-container {
     margin: 50rem auto 25rem;
     width: 120rem;
@@ -44,7 +44,7 @@ header {
   }
 }
 
-nav {
+.site-navigation {
   text-align: center;
   padding: 8rem 0;
 
@@ -58,10 +58,8 @@ nav {
   }
 }
 
-main {
-  .site-description {
-    text-align: center;
-    margin: 80rem 0;
-    font-size: 16rem;
-  }
+.site-description {
+  text-align: center;
+  margin: 80rem 0;
+  font-size: 16rem;
 }

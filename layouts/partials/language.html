@@ -1,0 +1,13 @@
+<nav>
+  <div class="container">
+    <div class="language-selector">
+      {{ if .IsTranslated }}
+        {{ range .Translations }}
+          <a class="language-item" href="{{ .Permalink }}">
+            {{ .Language.Lang }}
+          </a>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</nav>

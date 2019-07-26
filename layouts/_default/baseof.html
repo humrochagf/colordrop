@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="{{ .Site.Language.Lang }}">
   <head>
-    {{ partial "meta.html" . }}
+    {{ partial "meta" . }}
 
     {{ block "jsonLD" . }}
     {{ end }}
@@ -15,10 +15,17 @@
   </head>
 
   <body>
-    {{ partial "header.html" . }}
-    {{ partial "navigation.html" . }}
+    {{ partial "language" . }}
+    {{ partial "header" . }}
+    {{ partial "navigation" . }}
 
-    {{ block "main" . }}
-    {{ end }}
+    <main>
+      <div class="container">
+        {{ block "main" . }}
+        {{ end }}
+      </div>
+    </main>
+
+    {{ partial "footer" . }}
   </body>
 </html>
