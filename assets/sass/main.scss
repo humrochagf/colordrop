@@ -5,6 +5,7 @@
 
 // variable overrides
 $theme-color: {{ default "#000000" .Site.Params.themeColor }};
+$theme-inverse-color: {{ default "#ffffff" .Site.Params.themeInverseColor }};
 
 // theme styles
 @import "variables";

@@ -1,3 +1,11 @@
+body {
+  background-color: $theme-color;
+}
+
+.wrapper {
+  background-color: $theme-inverse-color;
+}
+
 .container {
   margin: 0 auto;
   width: 730px;
@@ -18,7 +26,7 @@
     border-bottom-left-radius: 8rem;
     border-bottom-right-radius: 8rem;
     font-weight: 800;
-    color: #ffffff;
+    color: $theme-inverse-color;
   }
 }
 
@@ -44,7 +52,7 @@
   }
 }
 
-.site-navigation {
+.main-navigation {
   text-align: center;
   padding: 8rem 0;
 
@@ -60,6 +68,17 @@
 
 .site-description {
   text-align: center;
-  margin: 80rem 0;
+  margin: 80rem 0 120rem;
   font-size: 16rem;
+}
+
+footer {
+  background-color: $theme-color;
+  text-align: center;
+
+  .footer-navigation {
+    a {
+      color: $theme-inverse-color;
+    }
+  }
 }

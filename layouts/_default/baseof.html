@@ -15,17 +15,19 @@
   </head>
 
   <body>
-    {{ partial "language" . }}
-    {{ partial "header" . }}
-    {{ partial "navigation" . }}
+    <div class="wrapper">
+      {{ partial "language" . }}
+      {{ partial "header" . }}
+      {{ partial "navigation" . }}
 
-    <main>
-      <div class="container">
-        {{ block "main" . }}
-        {{ end }}
-      </div>
-    </main>
+      <main>
+        <div class="container">
+          {{ block "main" . }}
+          {{ end }}
+        </div>
+      </main>
 
-    {{ partial "footer" . }}
+      {{ partial "footer" . }}
+    </div>
   </body>
 </html>
