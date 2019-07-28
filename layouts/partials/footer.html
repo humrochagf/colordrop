@@ -4,7 +4,7 @@
       {{ $currentPage := . }}
       {{ range .Site.Menus.footer }}
         <a href="{{ .URL | absLangURL }}">
-          {{ .Name }}
+          {{ partial "svg" .Name }}
         </a>
       {{ end }}
     </div>

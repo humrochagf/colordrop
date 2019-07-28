@@ -1,0 +1,6 @@
+<span class="inline-svg" >
+  {{- $fname:=print "themes/colordrop/static/img/svg/" . ".svg" -}}
+  {{- $path:="<path" -}}
+  {{- $fill:="<path fill=\"currentColor\"" -}}
+  {{ replace (readFile $fname) $path $fill | safeHTML }}
+</span>

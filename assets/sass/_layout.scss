@@ -77,8 +77,20 @@ footer {
   text-align: center;
 
   .footer-navigation {
+    padding: 40rem 0;
+
     a {
       color: $theme-inverse-color;
+
+      .inline-svg {
+        margin: 0 5rem;
+      }
     }
   }
+}
+
+.inline-svg {
+  display: inline-block;
+  height: 40rem;
+  width: 40rem;
 }
