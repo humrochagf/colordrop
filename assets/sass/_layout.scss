@@ -9,6 +9,7 @@ body {
 .container {
   margin: 0 auto;
   width: 730px;
+  padding: 0 15rem;
 
   @media screen and (max-width: 730px) {
     width: 100%;
@@ -60,7 +61,7 @@ body {
 
   a {
     padding: 8rem 16rem;
-    border-bottom: 1rem solid lighten($theme-color, 60%);
+    border-bottom: 1rem solid lighten($theme-color, 70%);
 
     &:hover, &:focus, &:active, &.active {
       border-bottom: 1rem solid $theme-color;
@@ -95,4 +96,16 @@ footer {
   display: inline-block;
   height: 40rem;
   width: 40rem;
+}
+
+.publish {
+  font-size: 12.8rem;
+  color: lighten($theme-color, 40%);
+  margin-bottom: 32rem;
+}
+
+hr {
+  margin-top: 40px;
+  border: 0;
+  border-top: 1rem solid lighten($theme-color, 90%);
 }

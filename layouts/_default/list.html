@@ -1,9 +1,13 @@
 {{ define "main" }}
   {{ range .Pages }}
     <article>
-      <h2>{{ .Title }}</h2>
+      <h1>{{ .Title }}</h1>
+
+      {{ partial "publish" . }}
 
       {{ .Description }}
     </article>
+
+    <hr>
   {{ end }}
 {{ end }}

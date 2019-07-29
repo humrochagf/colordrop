@@ -1,0 +1,6 @@
+<p class="publish">
+  {{ i18n "publish" }}
+  <time class="post-date" datetime="{{ .PublishDate.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+    {{ index $.Site.Data.months (.Site.Language.Lang) (printf "%d" .PublishDate.Month) }} {{ .PublishDate.Day }}, {{ .PublishDate.Year }}
+  </time>
+</p>

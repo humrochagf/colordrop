@@ -2,6 +2,8 @@
   <article>
     <h1>{{ .Title }}</h1>
 
+    {{ partial "publish" . }}
+
     {{ .Content }}
   </article>
 {{ end }}
