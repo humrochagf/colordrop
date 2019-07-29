@@ -20,7 +20,7 @@
 <link rel="icon" type="image/png" href="{{ "/img/favicon-16x16.png" | absURL }}" sizes="16x16" />
 
 <!-- SEO tags -->
-<link rel="canonical" href="{{ "." | absURL }}" />
+<link rel="canonical" href="{{ .Permalink }}" />
 
 {{ if .IsTranslated }}
   {{ range .Translations }}
@@ -46,7 +46,7 @@
 <meta property="og:site_name" content="{{ .Title }}" />
 <meta property="og:title" content="{{ .Title }}" />
 <meta property="og:description" content="{{ .Site.Params.description }}" />
-<meta property="og:url" content="{{ '.' | absURL }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:type" content="article" />
 {{ if .Params.shareImage }}
   <meta property="og:image" content="{{ .Params.shareImage | absURL }}" />
@@ -55,7 +55,7 @@
 {{ end }}
 
 <!-- Twitter -->
-<meta name="twitter:url" content="{{ '.' | absURL }}" />
+<meta name="twitter:url" content="{{ .Permalink }}" />
 <meta name="twitter:site" content="@{{ .Site.Params.twitter }}" />
 <meta name="twitter:creator" content="@{{ .Site.Params.twitter }}" />
 <meta name="twitter:title" content="{{ .Title }}" />

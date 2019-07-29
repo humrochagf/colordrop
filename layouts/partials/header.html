@@ -2,13 +2,13 @@
   <div class="container">
     <div class="header-group">
       <div class="header-logo-container">
-        <a class="header-logo-link" href="{{ "/" | absURL }}">
-          <img class="header-logo-circle" src="{{ .Site.Params.siteLogo100 }}" alt="Header Logo">
+        <a class="header-logo-link" href="{{ "/" | absLangURL }}">
+          <img class="header-logo-circle" src="{{ .Site.Params.siteLogo100 | absURL }}" alt="Header Logo">
         </a>
       </div>
 
       <h1 class="header-title">
-        <a href="{{ "/" | absURL }}">
+        <a href="{{ "/" | absLangURL }}">
           {{ .Site.Title }}
         </a>
       </h1>
