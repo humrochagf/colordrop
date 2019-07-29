@@ -1,0 +1,29 @@
+body {
+  background-color: $theme-color;
+}
+
+.wrapper {
+  background-color: $theme-inverse-color;
+}
+
+.container {
+  margin: 0 auto;
+  width: 730px;
+  padding: 0 15rem;
+
+  @media screen and (max-width: 730px) {
+    width: 100%;
+  }
+}
+
+hr {
+  margin-top: 40px;
+  border: 0;
+  border-top: 1rem solid lighten($theme-color, 90%);
+}
+
+.site-description {
+  text-align: center;
+  margin: 80rem 0 120rem;
+  font-size: 16rem;
+}

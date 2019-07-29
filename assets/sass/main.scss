@@ -10,4 +10,10 @@ $theme-inverse-color: {{ default "#ffffff" .Site.Params.themeInverseColor }};
 // theme styles
 @import "variables";
 @import "typography";
-@import "layout";
+@import "global";
+@import "language";
+@import "header";
+@import "navigation";
+@import "publish";
+@import "footer";
+@import "svg";

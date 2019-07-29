@@ -1,0 +1,14 @@
+.language-selector {
+  text-align: right;
+  margin: 0 4rem;
+
+  .language-item {
+    display: inline-block;
+    background-color: $theme-color;
+    padding: 2rem 10rem 5rem 10rem;
+    border-bottom-left-radius: 8rem;
+    border-bottom-right-radius: 8rem;
+    font-weight: 800;
+    color: $theme-inverse-color;
+  }
+}

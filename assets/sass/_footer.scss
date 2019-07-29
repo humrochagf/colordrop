@@ -1,0 +1,16 @@
+footer {
+  background-color: $theme-color;
+  text-align: center;
+
+  .footer-navigation {
+    padding: 40rem 0;
+
+    a {
+      color: $theme-inverse-color;
+
+      .inline-svg {
+        margin: 0 5rem;
+      }
+    }
+  }
+}

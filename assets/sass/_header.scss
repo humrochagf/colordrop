@@ -1,0 +1,23 @@
+.header-group {
+  .header-logo-container {
+    margin: 50rem auto 25rem;
+    width: 120rem;
+    height: 120rem;
+
+    .header-logo-circle {
+      border: 5rem solid $theme-color;
+      border-radius: 50%;
+      padding: 5rem;
+      width: 120rem;
+      height: 120rem;
+    }
+  }
+
+  .header-title {
+    margin: 10rem 0 5rem;
+    font-weight: 800;
+    font-size: 32rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}
