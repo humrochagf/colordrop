@@ -5,5 +5,7 @@
     {{ partial "publish" . }}
 
     {{ .Content }}
+
+    {{ partial "license" .Site.Params.license }}
   </article>
 {{ end }}

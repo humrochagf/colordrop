@@ -1,2 +1,14 @@
 - id: publish 
   translation: Publicado em
+
+- id: license1
+  translation: Licença Creative Commons
+
+- id: license2
+  translation: Esta obra está licenciada com uma Licença
+
+- id: license3
+  translation: Creative Commons
+
+- id: license4
+  translation: Internacional

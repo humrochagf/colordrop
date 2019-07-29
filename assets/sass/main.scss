@@ -17,3 +17,4 @@ $theme-inverse-color: {{ default "#ffffff" .Site.Params.themeInverseColor }};
 @import "publish";
 @import "footer";
 @import "svg";
+@import "license";

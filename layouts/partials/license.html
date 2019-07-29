@@ -1,0 +1,15 @@
+{{ if . }}
+  <div class="license">
+    <a rel="license" target="_blank" href="https://creativecommons.org/licenses/{{ .type }}/{{ .version }}/deed.{{ .locale }}">
+      <img alt="{{ i18n "license1" }}" style="border-width:0" src="/img/license/{{ .type }}/{{ .version }}/{{ .size }}.png" />
+    </a>
+
+    <p>
+      {{ i18n "license2" }}
+
+      <a rel="license" target="_blank" href="https://creativecommons.org/licenses/{{ .type }}/{{ .version }}/deed.{{ .locale }}">
+        {{ i18n "license3" }} {{ .name }} {{ .version }} {{ i18n "license4" }}
+      </a>.
+    </p>
+  </div>
+{{ end }}
