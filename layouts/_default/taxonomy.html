@@ -1,0 +1,15 @@
+{{ define "main" }}
+  <h1 class="text-center">Tag: {{ .Title }}</h1>
+
+  {{ range .Pages }}
+    <article>
+      <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+
+      {{ partial "publish" . }}
+
+      {{ .Description }}
+    </article>
+
+    <hr>
+  {{ end }}
+{{ end }}

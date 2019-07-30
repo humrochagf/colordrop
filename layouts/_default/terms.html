@@ -1,0 +1,13 @@
+{{ define "main" }}
+  <h1 class="text-center">{{ .Title }}</h1>
+
+  <div class="tag-group">
+    {{ range $index, $item := .Pages }}
+      {{ if $index }}
+        <span class="tag-separator">|</span>
+      {{ end }}
+
+      <a href="{{ $item.Permalink }}">{{ $item.Title }}</a>
+    {{ end }}
+  </div>
+{{ end }}

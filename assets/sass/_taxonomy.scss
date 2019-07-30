@@ -1,0 +1,17 @@
+.tag-group {
+  text-align: center;
+  margin: 60rem 40rem;
+
+  .tag-separator {
+    font-size: 24rem;
+    margin: 0 10rem;
+  }
+
+  a {
+    font-size: 24rem;
+
+    &:hover, &:focus, &:active {
+      font-weight: 600;
+    }
+  }
+}
