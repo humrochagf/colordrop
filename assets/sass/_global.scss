@@ -8,24 +8,38 @@ body {
 
 .container {
   margin: 0 auto;
-  width: 730px;
+  width: 760px;
   padding: 0 15rem;
 
-  @media screen and (max-width: 730px) {
+  @media screen and (max-width: 760px) {
     width: 100%;
   }
 }
 
+p img, p .embedded-video {
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 20rem;
+  margin-bottom: 20rem;
+
+  @media screen and (max-width: 760px) {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 p a, li a {
-  border-bottom: 1px solid lighten($theme-color, 60%);
+  border-bottom: 1rem solid lighten($theme-color, 60%);
 
   &:hover, &:focus, &:active {
-    border-bottom: 1px solid $theme-color;
+    border-bottom: 1rem solid $theme-color;
   }
 }
 
 hr {
-  margin-top: 40px;
+  margin-top: 40rem;
   border: 0;
   border-top: 1rem solid lighten($theme-color, 90%);
 }
@@ -38,4 +52,27 @@ hr {
 
 .text-center {
   text-align: center;
+}
+
+@each $type, $color in (
+  "info": #d1ecf1,
+  "warning": #fff3cd,
+  "danger": #f8d7da,
+) {
+  .tip.#{$type} {
+    background-color: $color;
+    border: 1rem solid darken($color, 10%);
+    border-radius: 4rem;
+    padding: 15rem 20rem;
+    color: darken($color, 60%);
+
+    a {
+      border-bottom: 1rem solid darken($color, 30%);
+
+      &:hover, &:focus, &:active {
+        color: darken($color, 70%);
+        border-bottom: 1rem solid darken($color, 40%);
+      }
+    }
+  }
 }
