@@ -20,14 +20,24 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 24rem 0 16rem;
+}
+
 h1 {
   font-size: 32rem;
-  margin: 40rem 0 2rem;
 }
 
 h2 {
   font-size: 28rem;
-  margin: 24rem 0 16rem;
+}
+
+h3 {
+  font-size: 24rem;
+}
+
+h4, h5, h6 {
+  font-size: 20rem;
 }
 
 p {

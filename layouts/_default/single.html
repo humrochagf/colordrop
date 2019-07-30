@@ -2,10 +2,6 @@
   <article>
     <h1>{{ .Title }}</h1>
 
-    {{ partial "publish" . }}
-
     {{ .Content }}
-
-    {{ partial "license" .Site.Params.license }}
   </article>
 {{ end }}

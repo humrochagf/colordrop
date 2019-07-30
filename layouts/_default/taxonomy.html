@@ -3,7 +3,7 @@
 
   {{ range .Pages }}
     <article>
-      <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 
       {{ partial "publish" . }}
 
