@@ -29,41 +29,41 @@
 {{ end }}
 
 <!-- General -->
-<meta name="description" content="{{ .Site.Params.description }}" />
-<meta name="author" content="{{ .Site.Params.author }}" />
+<meta name="description" content="{{ index .Params "description" | default .Site.Params.description }}" />
+<meta name="author" content="{{ .Site.Params.author.name }}" />
 <meta name="theme-color" content="#ffffff" />
 
 <!-- Google+ -->
 <meta itemprop="name" content="{{ .Title }}" />
-<meta itemprop="description" content="{{ .Site.Params.description }}" />
+<meta itemprop="description" content="{{ index .Params "description" | default .Site.Params.description }}" />
 {{ if .Params.shareImage }}
   <meta itemprop="image" content="{{ .Params.shareImage | absURL }}" />
 {{ else }}
-  <meta itemprop="image" content="{{ "/img/me-100x100.jpg" | absURL }}" />
+  <meta itemprop="image" content="{{ .Site.Params.siteLogo | absURL }}" />
 {{ end }}
 
 <!-- Facebook -->
-<meta property="og:site_name" content="{{ .Title }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
 <meta property="og:title" content="{{ .Title }}" />
-<meta property="og:description" content="{{ .Site.Params.description }}" />
+<meta property="og:description" content="{{ index .Params "description" | default .Site.Params.description }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:type" content="article" />
 {{ if .Params.shareImage }}
   <meta property="og:image" content="{{ .Params.shareImage | absURL }}" />
 {{ else }}
-  <meta property="og:image" content="{{ "/img/me-100x100.jpg" | absURL }}" />
+  <meta property="og:image" content="{{ .Site.Params.siteLogo | absURL }}" />
 {{ end }}
 
 <!-- Twitter -->
 <meta name="twitter:url" content="{{ .Permalink }}" />
 <meta name="twitter:site" content="@{{ .Site.Params.twitter }}" />
-<meta name="twitter:creator" content="@{{ .Site.Params.twitter }}" />
+<meta name="twitter:creator" content="@{{ .Site.Params.author.twitter }}" />
 <meta name="twitter:title" content="{{ .Title }}" />
-<meta name="twitter:description" content="{{ .Site.Params.description }}" />
+<meta name="twitter:description" content="{{ index .Params "description" | default .Site.Params.description }}" />
 {{ if .Params.shareImage }}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="{{ .Params.shareImage | absURL }}" />
 {{ else }}
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="{{ "/img/me-100x100.jpg" | absURL }}" />
+  <meta name="twitter:image" content="{{ .Site.Params.siteLogo | absURL }}" />
 {{ end }}

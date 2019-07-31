@@ -1,0 +1,14 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "name": "{{ .Site.Params.author.name }}",
+  "url": "{{ .Permalink }}",
+  "jobTitle": "{{ .Site.Params.author.jobTitle }}",
+  "gender": "{{ .Site.Params.author.gender }}",
+  "image": "{{ .Site.Params.author.image | absURL }}",
+  "sameAs": [
+    "https://github.com/{{ .Site.Params.author.github }}/",
+    "https://twitter.com/{{ .Site.Params.author.twitter }}/",
+    "https://www.linkedin.com/in/{{ .Site.Params.author.linkedin }}/"
+  ]
+}
