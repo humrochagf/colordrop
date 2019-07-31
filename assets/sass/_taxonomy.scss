@@ -1,14 +1,12 @@
 .tag-group {
   text-align: center;
-  margin: 60rem 40rem;
-
-  .tag-separator {
-    font-size: 24rem;
-    margin: 0 10rem;
-  }
+  margin: 40rem 0;
 
   a {
     font-size: 24rem;
+    line-height: 2;
+    margin: 0 15rem;
+    white-space: nowrap;
 
     &:hover, &:focus, &:active {
       font-weight: 600;
