@@ -15,7 +15,8 @@
         "@type": "BlogPosting",
         "headline": "{{ $page.Title }}",
         "url": "{{ $page.Permalink }}",
-        "datePublished": "{{ $page.PublishDate.Format "2006-01-02" }}"
+        "datePublished": "{{ $page.PublishDate.Format "2006-01-02" }}",
+        "description": "{{ $page.Description }}"
       }
     {{ end }}
   ]

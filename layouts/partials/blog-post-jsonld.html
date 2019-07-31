@@ -4,6 +4,8 @@
   "headline": "{{ .Title }}",
   "url": "{{ .Permalink }}",
   "datePublished": "{{ .PublishDate.Format "2006-01-02" }}",
+  "description": "{{ .Description }}",
+  "keywords": "{{ delimit .Params.Tags " " }}",
   "image": {
     "@type": "ImageObject",
     {{ if .Params.shareImage }}
