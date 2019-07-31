@@ -1,11 +1,24 @@
 <footer>
   <div class="container">
     <div class="footer-navigation">
-      {{ $currentPage := . }}
+      {{ $rssPage := .OutputFormats.Get "rss" }}
+
       {{ range .Site.Menus.footer }}
-        <a href="{{ .URL | absLangURL }}">
-          {{ partial "svg" .Name }}
-        </a>
+        {{ if eq .Name "rss" }}
+          {{ if $rssPage }}
+            <a href="{{ $rssPage.Permalink }}">
+              {{ partial "svg" .Name }}
+            </a>
+          {{ else }}
+            <a href="{{ "/blog/index.xml" | absLangURL }}">
+              {{ partial "svg" .Name }}
+            </a>
+          {{ end }}
+        {{ else }}
+          <a href="{{ .URL | absLangURL }}">
+            {{ partial "svg" .Name }}
+          </a>
+        {{ end }}
       {{ end }}
     </div>
   </div>

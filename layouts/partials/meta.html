@@ -28,6 +28,11 @@
   {{ end }}
 {{ end }}
 
+<!-- RSS Feed -->
+{{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end -}}
+
 <!-- General -->
 <meta name="description" content="{{ index .Params "description" | default .Site.Params.description }}" />
 <meta name="author" content="{{ .Site.Params.author.name }}" />
