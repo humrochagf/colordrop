@@ -12,3 +12,6 @@
 
 - id: license4
   translation: International License
+
+- id: notfound
+  translation: Page not found
