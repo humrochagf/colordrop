@@ -1,3 +1,9 @@
+{{ define "jsonLD" }}
+  <script type="application/ld+json">
+    {{ partial "blog-jsonld" . | safeJS }}
+  </script>
+{{ end }}
+
 {{ define "main" }}
   {{ range .Pages }}
     <article>

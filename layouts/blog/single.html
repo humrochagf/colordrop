@@ -1,3 +1,9 @@
+{{ define "jsonLD" }}
+  <script type="application/ld+json">
+    {{ partial "blog-post-jsonld" . | safeJS }}
+  </script>
+{{ end }}
+
 {{ define "main" }}
   <article>
     <h1 class="title">{{ .Title }}</h1>

@@ -1,0 +1,22 @@
+{
+  "@context": "http://schema.org",
+  "@type": "Blog",
+  "author": {
+    "@type": "Person",
+    "name": "{{ .Site.Params.author.name }}",
+    {{ with .Site.GetPage "/about" }}
+      "url": "{{ .Permalink }}"
+    {{ end }}
+  },
+  "blogPost": [
+    {{ range $index, $page := .Pages }}
+      {{ if $index }},{{ end }}
+      {
+        "@type": "BlogPosting",
+        "headline": "{{ $page.Title }}",
+        "url": "{{ $page.Permalink }}",
+        "datePublished": "{{ $page.PublishDate.Format "2006-01-02" }}"
+      }
+    {{ end }}
+  ]
+}

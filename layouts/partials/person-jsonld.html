@@ -2,7 +2,9 @@
   "@context": "http://schema.org/",
   "@type": "Person",
   "name": "{{ .Site.Params.author.name }}",
-  "url": "{{ .Permalink }}",
+  {{ with .Site.GetPage "/about" }}
+    "url": "{{ .Permalink }}",
+  {{ end }}
   "jobTitle": "{{ .Site.Params.author.jobTitle }}",
   "gender": "{{ .Site.Params.author.gender }}",
   "image": "{{ .Site.Params.author.image | absURL }}",
