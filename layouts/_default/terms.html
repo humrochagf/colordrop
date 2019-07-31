@@ -3,7 +3,7 @@
 
   <div class="tag-group">
     {{ range $index, $item := .Pages }}
-      <a href="{{ $item.Permalink }}">{{ $item.Title }}</a>
+      <a href="{{ $item.Permalink }}">{{ $item.Title | humanize | title }}</a>
     {{ end }}
   </div>
 {{ end }}

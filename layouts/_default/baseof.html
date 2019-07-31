@@ -7,7 +7,7 @@
     {{ end }}
 
     <!-- Page title -->
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <title>{{ .Title | humanize | title }} - {{ .Site.Title }}</title>
 
     <!-- styles -->
     {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}

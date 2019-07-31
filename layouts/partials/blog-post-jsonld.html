@@ -1,21 +1,18 @@
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "headline": "{{ .Title }}",
   "url": "{{ .Permalink }}",
-  "datePublished": "{{ .PublishDate.Format "2006-01-02" }}",
+  "headline": "{{ .Title }}",
   "description": "{{ .Description }}",
+  "datePublished": "{{ .PublishDate.Format "2006-01-02" }}",
   {{ if .Params.Tags }}
-    "keywords": "{{ delimit .Params.Tags " " }}",
+    "keywords": "{{ delimit .Params.Tags "," }}",
   {{ end }}
-  "image": {
-    "@type": "ImageObject",
-    {{ if .Params.shareImage }}
-      "url": "{{ .Params.shareImage | absURL }}"
-    {{ else }}
-      "url": "{{ .Site.Params.siteLogo | absURL }}"
-    {{ end }}
-  },
+  {{ if .Params.shareImage }}
+    "image": "{{ .Params.shareImage | absURL }}",
+  {{ else }}
+    "image": "{{ .Site.Params.siteLogo | absURL }}",
+  {{ end }}
   "author": {
     "@type": "Person",
     "name": "{{ .Site.Params.author.name }}",

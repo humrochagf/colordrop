@@ -1,6 +1,9 @@
 {
   "@context": "http://schema.org",
   "@type": "Blog",
+  "url": "{{ .Permalink }}",
+  "headline": "{{ .Title | humanize | title }} - {{ .Site.Title }}",
+  "description": "{{ .Site.Params.description }}",
   "author": {
     "@type": "Person",
     "name": "{{ .Site.Params.author.name }}",

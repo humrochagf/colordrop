@@ -34,7 +34,7 @@
 <meta name="theme-color" content="#ffffff" />
 
 <!-- Google+ -->
-<meta itemprop="name" content="{{ .Title }}" />
+<meta itemprop="name" content="{{ .Title | humanize | title }}" />
 <meta itemprop="description" content="{{ index .Params "description" | default .Site.Params.description }}" />
 {{ if .Params.shareImage }}
   <meta itemprop="image" content="{{ .Params.shareImage | absURL }}" />
@@ -44,7 +44,7 @@
 
 <!-- Facebook -->
 <meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:title" content="{{ .Title | humanize | title }}" />
 <meta property="og:description" content="{{ index .Params "description" | default .Site.Params.description }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 <meta property="og:type" content="article" />
@@ -58,7 +58,7 @@
 <meta name="twitter:url" content="{{ .Permalink }}" />
 <meta name="twitter:site" content="@{{ .Site.Params.twitter }}" />
 <meta name="twitter:creator" content="@{{ .Site.Params.author.twitter }}" />
-<meta name="twitter:title" content="{{ .Title }}" />
+<meta name="twitter:title" content="{{ .Title | humanize | title }}" />
 <meta name="twitter:description" content="{{ index .Params "description" | default .Site.Params.description }}" />
 {{ if .Params.shareImage }}
   <meta name="twitter:card" content="summary_large_image" />

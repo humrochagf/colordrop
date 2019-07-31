@@ -1,5 +1,11 @@
+{{ define "jsonLD" }}
+  <script type="application/ld+json">
+    {{ partial "blog-jsonld" . | safeJS }}
+  </script>
+{{ end }}
+
 {{ define "main" }}
-  <h1 class="text-center">Tag: {{ .Title }}</h1>
+  <h1 class="text-center">Tag: {{ .Title | humanize | title }}</h1>
 
   {{ range .Pages }}
     <article>
