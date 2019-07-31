@@ -5,7 +5,9 @@
   "url": "{{ .Permalink }}",
   "datePublished": "{{ .PublishDate.Format "2006-01-02" }}",
   "description": "{{ .Description }}",
-  "keywords": "{{ delimit .Params.Tags " " }}",
+  {{ if .Params.Tags }}
+    "keywords": "{{ delimit .Params.Tags " " }}",
+  {{ end }}
   "image": {
     "@type": "ImageObject",
     {{ if .Params.shareImage }}
