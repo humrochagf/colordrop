@@ -1,0 +1,46 @@
+{{ define "bodyClass" }}curriculum{{ end }}
+
+{{ define "body" }}
+  {{ partial "language" . }}
+
+  <main>
+    <header>
+      <h1>
+        <a href="{{ "/" | absLangURL  }}">{{ .Params.name }}</a>
+      </h1>
+
+      <p>
+        {{ .Params.JobTitle }} | <a href="{{ .Params.locationLink }}">{{ .Params.locationName }}</a>
+      </p>
+    </header>
+
+    <div class="content">
+      <div class="left">
+        {{ if .Params.contact }}
+          <section>
+            <h2>{{ i18n "contact" }}</h2>
+
+            {{ range .Params.contact }}
+              <p class="contact-item">
+                {{ partial "svg" .svg }}
+
+                <a href="{{ .url }}">{{ .display }}</a>
+              </p>
+            {{ end }}
+          </section>
+        {{ end }}
+
+        {{ if .Params.languages }}
+          <section>
+            <h2>{{ i18n "languages" }}</h2>
+
+            {{ .Params.languages | markdownify }}
+          </section>
+        {{ end }}
+      </div>
+
+      <div class="right">
+      </div>
+    </div>
+  </main>
+{{ end }}

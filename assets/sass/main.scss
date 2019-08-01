@@ -20,3 +20,4 @@ $theme-inverse-color: {{ default "#ffffff" .Site.Params.themeInverseColor }};
 @import "svg";
 @import "license";
 @import "taxonomy";
+@import "curriculum";

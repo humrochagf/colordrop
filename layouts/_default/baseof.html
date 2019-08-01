@@ -14,20 +14,22 @@
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
   </head>
 
-  <body>
-    <div class="wrapper">
-      {{ partial "language" . }}
-      {{ partial "header" . }}
-      {{ partial "navigation" . }}
+  <body class="{{ block "bodyClass" . }}{{ end }}">
+    {{ block "body" . }}
+      <div class="wrapper">
+        {{ partial "language" . }}
+        {{ partial "header" . }}
+        {{ partial "navigation" . }}
 
-      <main>
-        <div class="container">
-          {{ block "main" . }}
-          {{ end }}
-        </div>
-      </main>
+        <main>
+          <div class="container">
+            {{ block "main" . }}
+            {{ end }}
+          </div>
+        </main>
 
-      {{ partial "footer" . }}
-    </div>
+        {{ partial "footer" . }}
+      </div>
+    {{ end }}
   </body>
 </html>

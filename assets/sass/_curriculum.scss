@@ -1,0 +1,64 @@
+.curriculum {
+  background-color: $theme-inverse-color;
+
+  main {
+    width: 100%;
+    padding: 0 15rem;
+
+    @media screen and (min-width: 1140px) {
+      width: 1140px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      padding: 30rem 0 40rem;
+
+      h1 {
+        font-size: 64rem;
+        font-weight: 800;
+      }
+
+      p {
+        font-size: 22rem;
+        color: lighten($theme-color, 32%);
+      }
+    }
+
+    .left {
+      @media screen and (min-width: 1140px) {
+        margin-left: 100rem;
+      }
+    }
+
+    .content {
+      display: flex;
+
+      section {
+        margin-bottom: 60rem;
+
+        .contact-item {
+          line-height: 19rem;
+          margin-bottom: 24rem;
+
+          .inline-svg, a {
+            vertical-align: top;
+          }
+
+          .inline-svg {
+            height: 19rem;
+            width: 19rem;
+            line-height: 19rem;
+            padding: 2.5rem 0;
+
+            svg {
+              height: 14rem;
+              width: 14rem;
+              line-height: 14rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
