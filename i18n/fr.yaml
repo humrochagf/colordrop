@@ -21,3 +21,24 @@
 
 - id: languages
   translation: Langues
+
+- id: techskills
+  translation: Compétences Techniques
+
+- id: softskills
+  translation: Compétences non Techniques
+
+- id: opensource
+  translation: Open Source
+
+- id: profile
+  translation: Profil
+
+- id: employment
+  translation: Emploi
+
+- id: education
+  translation: Éducation
+
+- id: community
+  translation: Communauté

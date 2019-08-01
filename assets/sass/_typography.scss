@@ -1,10 +1,10 @@
 html {
-  font-size: 1px;  /* for using REM units */
+  font-size: 1px;  /* for using px units */
 }
 
 body {
   font-family: $font-family-sans-serif;
-  font-size: 14.4rem;
+  font-size: 14.4px;
   font-weight: 300;
   line-height: 1.5;
   color: lighten($theme-color, 15%);
@@ -21,25 +21,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 24rem 0 16rem;
+  margin: 24px 0 16px;
 }
 
 h1 {
-  font-size: 32rem;
+  font-size: 32px;
 }
 
 h2 {
-  font-size: 28rem;
+  font-size: 28px;
 }
 
 h3 {
-  font-size: 24rem;
+  font-size: 24px;
 }
 
 h4, h5, h6 {
-  font-size: 20rem;
+  font-size: 20px;
 }
 
 p {
-  margin-bottom: 16rem;
+  margin-bottom: 16px;
 }

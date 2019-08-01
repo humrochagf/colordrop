@@ -8,7 +8,7 @@ body {
 
 .container {
   width: 100%;
-  padding: 0 15rem;
+  padding: 0 15px;
 
   @media screen and (min-width: 760px) {
     width: 760px;
@@ -25,33 +25,33 @@ p img, p .embedded-video {
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
-    margin-top: 20rem;
-    margin-bottom: 20rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 }
 
 p a, li a {
-  border-bottom: 1rem solid lighten($theme-color, 60%);
+  border-bottom: 1px solid lighten($theme-color, 60%);
 
   &:hover, &:focus, &:active {
-    border-bottom: 1rem solid $theme-color;
+    border-bottom: 1px solid $theme-color;
   }
 }
 
 hr {
-  margin-top: 40rem;
+  margin-top: 40px;
   border: 0;
-  border-top: 1rem solid lighten($theme-color, 90%);
+  border-top: 1px solid lighten($theme-color, 90%);
 }
 
 .site-description {
   text-align: center;
-  margin: 80rem 0 120rem;
-  font-size: 16rem;
+  margin: 80px 0 120px;
+  font-size: 16px;
 }
 
 .title {
-  margin: 40rem 0 2rem;
+  margin: 40px 0 2px;
 }
 
 .text-center {
@@ -65,17 +65,17 @@ hr {
 ) {
   .tip.#{$type} {
     background-color: $color;
-    border: 1rem solid darken($color, 10%);
-    border-radius: 4rem;
-    padding: 15rem 20rem;
+    border: 1px solid darken($color, 10%);
+    border-radius: 4px;
+    padding: 15px 20px;
     color: darken($color, 60%);
 
     a {
-      border-bottom: 1rem solid darken($color, 30%);
+      border-bottom: 1px solid darken($color, 30%);
 
       &:hover, &:focus, &:active {
         color: darken($color, 70%);
-        border-bottom: 1rem solid darken($color, 40%);
+        border-bottom: 1px solid darken($color, 40%);
       }
     }
   }

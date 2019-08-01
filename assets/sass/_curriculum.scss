@@ -3,7 +3,6 @@
 
   main {
     width: 100%;
-    padding: 0 15rem;
 
     @media screen and (min-width: 1140px) {
       width: 1140px;
@@ -12,52 +11,98 @@
 
     header {
       text-align: center;
-      padding: 30rem 0 40rem;
+      padding: 30px 0 40px;
 
       h1 {
-        font-size: 64rem;
+        font-size: 64px;
         font-weight: 800;
       }
 
       p {
-        font-size: 22rem;
+        font-size: 22px;
         color: lighten($theme-color, 32%);
-      }
-    }
-
-    .left {
-      @media screen and (min-width: 1140px) {
-        margin-left: 100rem;
       }
     }
 
     .content {
       display: flex;
+      flex-direction: column-reverse;
+
+      @media screen and (min-width: 1140px) {
+        flex-direction: row;
+      }
 
       section {
-        margin-bottom: 60rem;
+        padding: 0 15px;
+        margin-bottom: 60px;
+
+        h3 {
+          margin-bottom: 0;
+        }
 
         .contact-item {
-          line-height: 19rem;
-          margin-bottom: 24rem;
+          line-height: 19px;
+          margin-bottom: 24px;
 
           .inline-svg, a {
             vertical-align: top;
           }
 
           .inline-svg {
-            height: 19rem;
-            width: 19rem;
-            line-height: 19rem;
-            padding: 2.5rem 0;
+            height: 19px;
+            width: 19px;
+            line-height: 19px;
+            padding: 2.5px 0;
 
             svg {
-              height: 14rem;
-              width: 14rem;
-              line-height: 14rem;
+              height: 14px;
+              width: 14px;
+              line-height: 14px;
             }
           }
         }
+      }
+    }
+
+    .left {
+      width: 100%;
+
+      @media screen and (min-width: 1140px) {
+        flex: 0 0 34%;
+        margin-left: 100px;
+      }
+    }
+
+    .right {
+      width: 100%;
+
+      section {
+        padding-bottom: 1px;
+      }
+
+      @media screen and (min-width: 1140px) {
+        flex: 0 0 50%;
+
+        section {
+          border-left: 1px solid lighten($theme-color, 90%);
+        padding: 0 15px 1px;
+        }
+      }
+    }
+  }
+
+  @media print {
+    nav {
+      display: none;
+    }
+
+    p a, li a, .page li a, .nav a, header h1 a {
+      border-bottom: none;
+      text-decoration: none;
+
+      &:hover, &:focus, &:active, &.active {
+        border-bottom: none;
+        text-decoration: none;
       }
     }
   }

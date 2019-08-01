@@ -37,9 +37,64 @@
             {{ .Params.languages | markdownify }}
           </section>
         {{ end }}
+
+        {{ if .Params.techSkills }}
+          <section>
+            <h2>{{ i18n "techskills" }}</h2>
+
+            {{ .Params.techSkills | markdownify }}
+          </section>
+        {{ end }}
+
+        {{ if .Params.softSkills }}
+          <section>
+            <h2>{{ i18n "softskills" }}</h2>
+
+            {{ .Params.softSkills | markdownify }}
+          </section>
+        {{ end }}
+
+        {{ if .Params.openSource }}
+          <section>
+            <h2>{{ i18n "opensource" }}</h2>
+
+            {{ .Params.openSource | markdownify }}
+          </section>
+        {{ end }}
       </div>
 
       <div class="right">
+        {{ if .Params.profile }}
+          <section>
+            <h2>{{ i18n "profile" }}</h2>
+
+            <p>{{ .Params.profile | markdownify }}</p>
+          </section>
+        {{ end }}
+
+        {{ if .Params.employment }}
+          <section>
+            <h2>{{ i18n "employment" }}</h2>
+
+            {{ .Params.employment | markdownify }}
+          </section>
+        {{ end }}
+
+        {{ if .Params.education }}
+          <section>
+            <h2>{{ i18n "education" }}</h2>
+
+            {{ .Params.education | markdownify }}
+          </section>
+        {{ end }}
+
+        {{ if .Params.community }}
+          <section>
+            <h2>{{ i18n "community" }}</h2>
+
+            {{ .Params.community | markdownify }}
+          </section>
+        {{ end }}
       </div>
     </div>
   </main>

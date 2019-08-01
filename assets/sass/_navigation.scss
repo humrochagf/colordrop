@@ -1,13 +1,13 @@
 .main-navigation {
   text-align: center;
-  padding: 8rem 0;
+  padding: 8px 0;
 
   a {
-    padding: 8rem 16rem;
-    border-bottom: 1rem solid lighten($theme-color, 70%);
+    padding: 8px 16px;
+    border-bottom: 1px solid lighten($theme-color, 70%);
 
     &:hover, &:focus, &:active, &.active {
-      border-bottom: 1rem solid $theme-color;
+      border-bottom: 1px solid $theme-color;
     }
   }
 }
