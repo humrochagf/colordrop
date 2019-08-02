@@ -1,6 +1,8 @@
 .inline-svg {
   display: inline-block;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
+
+  svg {
+    height: 40px;
+    width: auto;
+  }
 }

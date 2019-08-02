@@ -1,3 +1,9 @@
+{{ define "jsonLD" }}
+  <script type="application/ld+json">
+    {{ partial "person-jsonld" . | safeJS }}
+  </script>
+{{ end }}
+
 {{ define "bodyClass" }}curriculum{{ end }}
 
 {{ define "body" }}
