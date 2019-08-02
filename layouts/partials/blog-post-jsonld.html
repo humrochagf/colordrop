@@ -8,7 +8,9 @@
   {{ if .Params.Tags }}
     "keywords": "{{ delimit .Params.Tags "," }}",
   {{ end }}
+  {{ if .Params.images }}
   "image": "{{ index .Params.images 0 | absURL }}",
+  {{ end }}
   "author": {
     "@type": "Person",
     "name": "{{ .Site.Author.name }}",
