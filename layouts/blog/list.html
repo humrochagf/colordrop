@@ -5,7 +5,7 @@
 {{ end }}
 
 {{ define "main" }}
-  {{ range .Pages }}
+  {{ range .Paginator.Pages }}
     <article>
       <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
 
@@ -16,4 +16,6 @@
 
     <hr>
   {{ end }}
+
+  {{ template "_internal/pagination.html" . }}
 {{ end }}
