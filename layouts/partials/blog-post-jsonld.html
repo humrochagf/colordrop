@@ -8,14 +8,10 @@
   {{ if .Params.Tags }}
     "keywords": "{{ delimit .Params.Tags "," }}",
   {{ end }}
-  {{ if .Params.shareImage }}
-    "image": "{{ .Params.shareImage | absURL }}",
-  {{ else }}
-    "image": "{{ .Site.Params.siteLogo | absURL }}",
-  {{ end }}
+  "image": "{{ index .Params.images 0 | absURL }}",
   "author": {
     "@type": "Person",
-    "name": "{{ .Site.Params.author.name }}",
+    "name": "{{ .Site.Author.name }}",
     {{ with .Site.GetPage "/about" }}
       "url": "{{ .Permalink }}"
     {{ end }}

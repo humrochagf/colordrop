@@ -3,17 +3,7 @@
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
-{{ if .Site.Params.gTagId }}
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.gTagId }}"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', '{{ .Site.Params.gTagId }}');
-  </script>
-{{ end }}
+{{ template "_internal/google_analytics_async.html" . }}
 
 <!-- Favicons -->
 <link rel="icon" type="image/png" href="{{ "/img/favicon-32x32.png" | absURL }}" sizes="32x32" />
@@ -35,40 +25,15 @@
 
 <!-- General -->
 <meta name="description" content="{{ index .Params "description" | default .Site.Params.description }}" />
-<meta name="author" content="{{ .Site.Params.author.name }}" />
-<meta name="theme-color" content="#ffffff" />
+<meta name="author" content="{{ .Site.Author.name }}" />
+<meta name="theme-color" content="{{ .Site.Params.themeColor }}" />
 
-<!-- Google+ -->
-<meta itemprop="name" content="{{ .Title | humanize | title }}" />
-<meta itemprop="description" content="{{ index .Params "description" | default .Site.Params.description }}" />
-{{ if .Params.shareImage }}
-  <meta itemprop="image" content="{{ .Params.shareImage | absURL }}" />
-{{ else }}
-  <meta itemprop="image" content="{{ .Site.Params.siteLogo | absURL }}" />
-{{ end }}
+<!-- Schema -->
+{{ template "_internal/schema.html" . }}
 
-<!-- Facebook -->
-<meta property="og:site_name" content="{{ .Site.Title }}" />
-<meta property="og:title" content="{{ .Title | humanize | title }}" />
-<meta property="og:description" content="{{ index .Params "description" | default .Site.Params.description }}" />
-<meta property="og:url" content="{{ .Permalink }}" />
-<meta property="og:type" content="article" />
-{{ if .Params.shareImage }}
-  <meta property="og:image" content="{{ .Params.shareImage | absURL }}" />
-{{ else }}
-  <meta property="og:image" content="{{ .Site.Params.siteLogo | absURL }}" />
-{{ end }}
+<!-- Open Graph -->
+{{ template "_internal/opengraph.html" . }}
 
 <!-- Twitter -->
-<meta name="twitter:url" content="{{ .Permalink }}" />
-<meta name="twitter:site" content="@{{ .Site.Params.twitter }}" />
-<meta name="twitter:creator" content="@{{ .Site.Params.author.twitter }}" />
-<meta name="twitter:title" content="{{ .Title | humanize | title }}" />
-<meta name="twitter:description" content="{{ index .Params "description" | default .Site.Params.description }}" />
-{{ if .Params.shareImage }}
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:image" content="{{ .Params.shareImage | absURL }}" />
-{{ else }}
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:image" content="{{ .Site.Params.siteLogo | absURL }}" />
-{{ end }}
+{{ template "_internal/twitter_cards.html" . }}
+<meta name="twitter:creator" content="@{{ .Site.Author.twitter }}" />

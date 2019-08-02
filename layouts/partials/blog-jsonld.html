@@ -6,7 +6,7 @@
   "description": "{{ .Site.Params.description }}",
   "author": {
     "@type": "Person",
-    "name": "{{ .Site.Params.author.name }}",
+    "name": "{{ .Site.Author.name }}",
     {{ with .Site.GetPage "/about" }}
       "url": "{{ .Permalink }}"
     {{ end }}
