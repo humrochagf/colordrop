@@ -9,7 +9,7 @@
     white-space: nowrap;
 
     &:hover, &:focus, &:active {
-      font-weight: 600;
+      border-bottom: 1px solid $theme-color;
     }
   }
 }
