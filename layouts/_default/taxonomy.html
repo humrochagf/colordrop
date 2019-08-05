@@ -5,7 +5,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <h1 class="text-center">Tag: {{ .Title | humanize | title }}</h1>
+  <h1 class="text-center">TAG: {{ .Title | upper }}</h1>
 
   {{ range .Paginator.Pages }}
     <article>

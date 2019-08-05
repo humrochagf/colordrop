@@ -1,9 +1,9 @@
 {{ define "main" }}
-  <h1 class="text-center">{{ .Title }}</h1>
+  <h1 class="text-center">{{ .Title | upper }}</h1>
 
   <div class="tag-group">
     {{ range $index, $item := .Pages }}
-      <a href="{{ $item.Permalink }}">{{ $item.Title | humanize | title }}</a>
+      <a href="{{ $item.Permalink }}">{{ $item.Title }}</a>
     {{ end }}
   </div>
 {{ end }}
