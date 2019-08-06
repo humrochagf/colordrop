@@ -9,21 +9,26 @@ p code {
   margin-bottom: 20px;
 
   pre {
-    //overflow: auto;
-    border-radius: 4px;
+    overflow: auto;
     padding: 5px 0 6px;
     margin: 0;
   }
 
-  & > div {
-    border-radius: 4px;
-  }
-
   & > pre {
     padding: 5px 10px 6px;
+
+    code {
+      display: inline-block;
+      padding-right: 10px;
+    }
   }
 
  td:last-child {
     width: 100%;
+
+    code {
+      display: inline-block;
+      padding-right: 10px;
+    }
   }
 }
