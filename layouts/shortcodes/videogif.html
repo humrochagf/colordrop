@@ -1,0 +1,17 @@
+<video class="videogif" autoplay loop muted inline>
+  {{ range .Params  }}
+    {{ $extension := path.Ext . }}
+
+    {{ if eq $extension ".webm" }}
+      <source src="{{ . }}" type="video/webm">
+    {{ end }}
+
+    {{ if eq $extension ".mp4" }}
+      <source src="{{ . }}" type="video/mp4">
+    {{ end }}
+
+    {{ if eq $extension ".gif" }}
+      <img src="{{ . }}" />
+    {{ end }}
+  {{ end }}
+</video>
