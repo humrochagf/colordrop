@@ -11,7 +11,7 @@
 
     <!-- styles -->
     {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ $style.Permalink }}">
   </head>
 
   <body class="{{ block "bodyClass" . }}{{ end }}">
