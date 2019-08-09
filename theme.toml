@@ -1,0 +1,12 @@
+name = "ColorDrop"
+license = "MIT"
+licenselink = "https://github.com/humrochagf/colordrop/blob/master/LICENSE.md"
+description = "Customizable, monochromatic and minimalist hugo theme for personal blogs"
+homepage = "https://humberto.io/"
+tags = ["blog", "customizable", "monochromatic", "mimimalist"]
+features = ["blog", "tags", "curriculum"]
+min_version = 0.38
+
+[author]
+  name = "Humberto Rocha"
+  homepage = "https://humberto.io"
