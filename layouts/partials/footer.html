@@ -23,6 +23,10 @@
     </div>
   </div>
 
+  {{ if .Site.Copyright }}
+    <p>{{ .Site.Copyright }}</p>
+  {{ end }}
+
   <p class="made-with-love">
     <a href="https://github.com/humrochagf/colordrop"><b>Colordrop</b></a> theme | Made with {{ partial "svg" "heart" }} by <a href="https://humberto.io/"><b>Humberto Rocha</b></a>
   </p>
