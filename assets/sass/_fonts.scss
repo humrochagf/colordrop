@@ -2,6 +2,7 @@
   font-family: 'Montserrat';
   font-style: italic;
   font-weight: 300;
+  font-display: swap;
   src: local('Montserrat Light Italic'), local('Montserrat-LightItalic'), url(/fonts/Montserrat-LightItalic.ttf);
 }
 
@@ -9,6 +10,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: local('Montserrat Light'), local('Montserrat-Light'), url(/fonts/Montserrat-Light.ttf);
 }
 
@@ -16,6 +18,7 @@
   font-family: 'Montserrat';
   font-style: italic;
   font-weight: 400;
+  font-display: swap;
   src: local('Montserrat Italic'), local('Montserrat-Italic'), url(/fonts/Montserrat-Italic.ttf);
 }
 
@@ -23,6 +26,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local('Montserrat Regular'), local('Montserrat-Regular'), url(/fonts/Montserrat-Regular.ttf);
 }
 
@@ -30,6 +34,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
   src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(/fonts/Montserrat-SemiBold.ttf);
 }
 
@@ -37,6 +42,7 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 800;
+  font-display: swap;
   src: local('Montserrat ExtraBold'), local('Montserrat-ExtraBold'), url(/fonts/Montserrat-ExtraBold.ttf);
 }
 
@@ -44,5 +50,6 @@
   font-family: 'Inconsolata';
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: local('Inconsolata Regular'), local('Inconsolata-Regular'), url(/fonts/Inconsolata-Regular.ttf);
 }
