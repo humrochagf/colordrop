@@ -1,15 +1,28 @@
 footer {
   background-color: $theme-color;
   text-align: center;
+  color: $theme-inverse-color;
 
   .footer-navigation {
-    padding: 40px 0;
+    padding: 40px 0 20px;
 
     a {
-      color: $theme-inverse-color;
-
       .inline-svg {
         margin: 0 5px;
+      }
+    }
+  }
+
+  .made-with-love {
+    font-size: 12px;
+    margin-bottom: 30px;
+
+    .inline-svg {
+      vertical-align: middle;
+
+      svg {
+        color: #f56b6b;
+        height: 12px;
       }
     }
   }
