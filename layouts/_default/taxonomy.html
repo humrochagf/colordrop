@@ -9,7 +9,7 @@
 
   {{ range .Paginator.Pages }}
     <article>
-      <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+      <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 
       {{ partial "publish" . }}
 
