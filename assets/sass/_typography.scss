@@ -5,7 +5,7 @@ html {
 body {
   font-family: $font-family-sans-serif;
   font-size: 14.4px;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   color: lighten($theme-color, 15%);
 }
@@ -14,13 +14,14 @@ pre, code, kbd, samp {
   font-family: $font-family-monospace;
 }
 
+b, strong {
+  font-weight: 500;
+}
 
 h1, h2, h3, h4, h5, h6 {
   color: $theme-color;
   line-height: 1.2;
-}
-
-h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
   margin: 24px 0 16px;
 }
 
