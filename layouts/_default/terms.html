@@ -1,5 +1,5 @@
 {{ define "main" }}
-  <h1 class="text-center">{{ .Title | upper }}</h1>
+  <h1 class="text-center">{{ .Title | title }}</h1>
 
   <div class="tag-group">
     {{ range $index, $item := .Pages }}
