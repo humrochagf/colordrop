@@ -24,6 +24,8 @@ params:
   siteLogo: "logo-photo.png"
 ```
 
+## Website Example
+
 You check [my blog](https://humberto.io) to see the theme fully running.
 
 ![theme image](/images/screenshot.png)
