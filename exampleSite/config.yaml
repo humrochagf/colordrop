@@ -1,4 +1,4 @@
-baseURL: https://themes.gohugo.io/theme/colordrop/
+baseURL: https://example.com
 languageCode: en-us
 title: Colordrop Theme
 theme: colordrop
@@ -6,7 +6,7 @@ theme: colordrop
 author:
   name: Author Name
   job: Developer
-  image: /img/me.jpg
+  image: /profile.png
   github: github
   twitter: twitter
   linkedin: linkedin
@@ -55,7 +55,7 @@ menu:
 
 params:
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis velit luctus felis tristique eleifend. Maecenas suscipit orci eget metus eleifend lobortis in vitae nisl. Nulla ultrices blandit diam, non. 
-  siteLogo: profile.png
+  siteLogo: /profile.png
   themeColor: "#000000"
   themeInverseColor: "#ffffff"
 
