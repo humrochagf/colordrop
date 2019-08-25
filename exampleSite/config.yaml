@@ -1,0 +1,92 @@
+baseURL: https://themes.gohugo.io/theme/colordrop/
+languageCode: en-us
+title: Colordrop Theme
+theme: colordrop
+
+author:
+  name: Author Name
+  job: Developer
+  image: /img/me.jpg
+  github: github
+  twitter: twitter
+  linkedin: linkedin
+
+taxonomies:
+  tag: tags
+
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 2
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 3
+  footer:
+    - identifier: github
+      name: github
+      url: "#"
+      weight: 1
+    - identifier: twitter
+      name: twitter
+      url: "#"
+      weight: 2
+    - identifier: linkedin
+      name: linkedin
+      url: "#"
+      weight: 3
+    - identifier: keybase
+      name: keybase
+      url: "#"
+      weight: 4
+    - identifier: rss
+      name: rss
+      weight: 5
+    - identifier: curriculum
+      name: curriculum
+      url: /curriculum/
+      weight: 6
+    - identifier: email
+      name: email
+      url: "#"
+      weight: 7
+
+params:
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis velit luctus felis tristique eleifend. Maecenas suscipit orci eget metus eleifend lobortis in vitae nisl. Nulla ultrices blandit diam, non. 
+  siteLogo: profile.png
+  themeColor: "#000000"
+  themeInverseColor: "#ffffff"
+
+  license:
+    name: Attribuition-ShareAlike
+    type: by-sa
+    version: "4.0"
+    locale: en
+    size: 88x31
+
+languages:
+  en:
+    languageName: English
+    weight: 1
+  pt-br:
+    languageName: Português Brasileiro
+    weight: 2
+    params:
+      license:
+        name: Atribuição-CompartilhaIgual
+        type: by-sa
+        version: "4.0"
+        locale: pt_BR
+        size: 88x31
+  fr:
+    languageName: Français
+    weight: 3
+    params:
+      license:
+        name: Attribution - Partage dans les Mêmes Conditions
+        type: by-sa
+        version: "4.0"
+        locale: fr
+        size: 88x31
