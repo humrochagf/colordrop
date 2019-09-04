@@ -1,1 +1,57 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M319.4 320.6L224 416l-95.4-95.4C57.1 323.7 0 382.2 0 454.4v9.6c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-9.6c0-72.2-57.1-130.7-128.6-133.8zM13.6 79.8l6.4 1.5v58.4c-7 4.2-12 11.5-12 20.3 0 8.4 4.6 15.4 11.1 19.7L3.5 242c-1.7 6.9 2.1 14 7.6 14h41.8c5.5 0 9.3-7.1 7.6-14l-15.6-62.3C51.4 175.4 56 168.4 56 160c0-8.8-5-16.1-12-20.3V87.1l66 15.9c-8.6 17.2-14 36.4-14 57 0 70.7 57.3 128 128 128s128-57.3 128-128c0-20.6-5.3-39.8-14-57l96.3-23.2c18.2-4.4 18.2-27.1 0-31.5l-190.4-46c-13-3.1-26.7-3.1-39.7 0L13.6 48.2c-18.1 4.4-18.1 27.2 0 31.6z"/></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 15680 20480"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="curriculum.svg"
+   width="35"
+   height="40"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1600"
+     inkscape:window-height="845"
+     id="namedview6"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="8"
+     inkscape:cx="59.92482"
+     inkscape:cy="-1.0447268"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     d="M 11655.83,12824.48 7840.0001,16640.464 4024.17,12824.48 c -2859.863,123.906 -5143.7701,2463.775 -5143.7701,5352.003 v 384.005 c 0,1059.853 859.96601,1919.512 1919.92167,1919.512 H 14879.678 c 1059.956,0 1919.922,-859.659 1919.922,-1919.512 v -384.005 c 0,-2888.228 -2283.906,-5228.097 -5143.77,-5352.003 z M -575.64445,3193.1279 l 256.0032,59.9048 v 2335.7732 c -279.9651,167.9381 -479.9548,459.7818 -479.9548,812.0422 0,335.8762 183.9639,615.9437 443.96075,787.9778 l -623.9822,2491.9352 c -67.9944,275.9716 84.02025,559.6229 303.9782,559.6229 H 996.31762 c 219.95798,0 371.97268,-283.6513 303.97828,-559.6229 L 676.31362,7188.8259 c 259.99685,-172.0341 443.96078,-452.1016 443.96078,-787.9778 0,-352.2604 -199.98973,-644.1041 -479.95483,-812.0422 V 3484.9716 l 2639.90503,635.9119 c -344.0171,688.1366 -559.9814,1456.1463 -559.9814,2279.9646 0,2827.8113 2291.8942,5119.5519 5119.7569,5119.5519 2827.8619,0 5119.7569,-2291.7406 5119.7569,-5119.5519 0,-823.8183 -211.971,-1591.828 -559.982,-2279.9646 l 3851.824,-927.7556 c 727.971,-176.1302 727.971,-1083.9175 0,-1260.0477 L 8635.9653,92.929226 c -519.9937,-123.905551 -1067.943,-123.905551 -1587.9367,0 L -575.64445,1928.9841 c -723.92585,176.1302 -723.92585,1088.0136 0,1264.1438 z"
+     id="path2"
+     inkscape:connector-curvature="0"
+     style="stroke-width:39.99821472" />
+</svg>
