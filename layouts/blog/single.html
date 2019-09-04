@@ -4,6 +4,12 @@
   </script>
 {{ end }}
 
+{{ define "headAdditional" }}
+  {{ if .Params.katex }}
+    {{ partial "katex" . }}
+  {{ end }}
+{{ end }}
+
 {{ define "main" }}
   <article>
     <h1 class="title">{{ .Title }}</h1>

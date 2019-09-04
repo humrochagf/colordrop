@@ -12,6 +12,9 @@
     <!-- styles -->
     {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | resources.ToCSS | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
+
+    {{ block "headAdditional" . }}
+    {{ end }}
   </head>
 
   <body class="{{ block "bodyClass" . }}{{ end }}">
@@ -33,5 +36,8 @@
     {{ end }}
 
     {{ partial "addthis" . }}
+
+    {{ block "footerJS" . }}
+    {{ end }}
   </body>
 </html>
