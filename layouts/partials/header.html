@@ -9,19 +9,11 @@
         </a>
       </div>
 
-      {{ if .IsHome }}
-        <h1 class="header-title">
-          <a href="{{ "/" | absLangURL }}">
-            {{ .Site.Title }}
-          </a>
-        </h1>
-      {{ else }}
-        <div class="header-title">
-          <a href="{{ "/" | absLangURL }}">
-            {{ .Site.Title }}
-          </a>
-        </div>
-      {{ end }}
+      <div class="header-title">
+        <a href="{{ "/" | absLangURL }}">
+          {{ .Site.Title }}
+        </a>
+      </div>
     </div>
   </div>
 </header>

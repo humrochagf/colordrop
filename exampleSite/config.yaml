@@ -6,7 +6,7 @@ theme: colordrop
 author:
   name: Author Name
   job: Developer
-  image: /profile.png
+  image: profile.png
   github: github
   twitter: twitter
   linkedin: linkedin
