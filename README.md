@@ -12,7 +12,7 @@ params:
   themeInverseColor: "#ffffff"
 ```
 
-![theme colors image](/images/tn.png)
+![theme colors image](https://raw.githubusercontent.com/humrochagf/colordrop/master/images/tn.png)
 
 ## Home page and Logo
 
@@ -28,6 +28,6 @@ params:
 
 You check [my blog](https://humberto.io) to see the theme fully running.
 
-![theme image](/images/screenshot.png)
+![theme image](https://raw.githubusercontent.com/humrochagf/colordrop/master/images/post.png)
 
 **Obs:** This theme uses pipes to compile sass so you'll have to use hugo extensions.
