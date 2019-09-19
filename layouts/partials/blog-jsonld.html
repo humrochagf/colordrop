@@ -7,7 +7,7 @@
   "author": {
     "@type": "Person",
     "name": "{{ .Site.Author.name }}",
-    {{ with .Site.GetPage "/about" }}
+    {{ with .Site.GetPage "/curriculum" }}
       "url": "{{ .Permalink }}"
     {{ end }}
   },
