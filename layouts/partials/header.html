@@ -2,7 +2,7 @@
   <div class="container">
     <div class="header-group">
       <div class="header-logo-container">
-        <a class="header-logo-link" href="{{ .Site.BaseURL | absLangURL }}">
+        <a class="header-logo-link" href="{{ "/" | absLangURL }}">
           {{ if .Site.Params.siteLogo }}
             <img class="header-logo-circle" src="{{ .Site.Params.siteLogo | absURL }}" alt="{{ .Site.Title }} logo">
           {{ end }}
@@ -10,7 +10,7 @@
       </div>
 
       <div class="header-title">
-        <a href="{{ .Site.BaseURL | absLangURL }}">
+        <a href="{{ "/" | absLangURL }}">
           {{ .Site.Title }}
         </a>
       </div>
