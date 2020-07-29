@@ -21,6 +21,6 @@ if __name__ == '__main__':
 
 Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa. Adipiscing bibendum est ultricies integer quis auctor. Auctor elit sed vulputate mi sit amet mauris commodo. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus iaculis. Quis viverra nibh cras pulvinar. Egestas congue quisque egestas diam in arcu. Dictum at tempor commodo ullamcorper a lacus. Velit egestas dui id ornare arcu odio ut.
 
-{{% tip class="info" %}}
+{{< tip class="info" >}}
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Bibendum arcu vitae elementum curabitur vitae nunc sed.
-{{% /tip %}}
+{{< /tip >}}
