@@ -37,7 +37,7 @@ main {
     padding-bottom: 20px;
   }
 
-  p img, .videogif, .itchio, twitter-widget {
+  p img, .videogif, .itchio, .twitter-tweet {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -48,6 +48,10 @@ main {
       margin-right: 15%;
       margin-top: 20px;
       margin-bottom: 20px;
+    }
+
+    iframe {
+      padding-bottom: 0;
     }
   }
 }
