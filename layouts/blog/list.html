@@ -13,7 +13,9 @@
 
       {{ partial "publish" . }}
 
-      {{ .Description }}
+      <img class="list-image" src="{{ index .Params.images 0 | safeURL }}" alt="{{ .Title }}" title="{{ .Title }}" />
+
+      {{ .Summary }}
     </article>
 
     <hr>
