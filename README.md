@@ -24,6 +24,15 @@ params:
   siteLogo: "logo-photo.png"
 ```
 
+## Custom CSS
+
+You can load your custom CSS files by adding them under the `static` folder, e.g. `static/css/custom.css` and then defining the parameters:
+
+```yaml
+params:
+  custom_css: "css/custom.css"
+```
+
 ## Website Example
 
 You check [my blog](https://humberto.io) to see the theme fully running.
