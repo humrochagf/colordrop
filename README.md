@@ -16,10 +16,18 @@ Then add it as submodule of your repository:
 git submodule add git@github.com:humrochagf/colordrop.git themes/colordrop
 ```
 
-And add this configuration to your blog config.yaml
+And add this configuration to your blog config.
+
+- yaml:
 
 ```yaml
 theme: colordrop
+```
+
+- toml:
+
+```toml
+theme = "colordrop"
 ```
 
 ### Version pinning
@@ -43,20 +51,38 @@ You just need to download it at the version you want from the [release](https://
     └── colordrop
 ```
 
-And add this configuration to your blog config.yaml
+And add this configuration to your blog config.
+
+- yaml:
 
 ```yaml
 theme: colordrop
 ```
 
+- toml:
+
+```toml
+theme = "colordrop"
+```
+
 ## Customize Colors
 
-The theme colors can be customized by changing the `themeColor` and `themeInverseColor` variables at params:
+The theme colors can be customized by changing the `themeColor` and `themeInverseColor` variables at params.
+
+- yaml:
 
 ```yaml
 params:
   themeColor: "#000000"
   themeInverseColor: "#ffffff"
+```
+
+- toml:
+
+```toml
+[params]
+themeColor = "#000000"
+themeInverseColor = "#ffffff"
 ```
 
 ![theme colors image](https://raw.githubusercontent.com/humrochagf/colordrop/master/images/tn.png)
@@ -65,19 +91,38 @@ params:
 
 The website logo can be set with the variable `siteLogo` while the variable `description` will be the displayed at the website home page.
 
+- yaml:
+
 ```yaml
 params:
   description: Welcome to my blog...
   siteLogo: "logo-photo.png"
 ```
 
+- toml:
+
+```toml
+[params]
+description = "Welcome to my blog..."
+siteLogo = "logo-photo.png"
+```
+
 ## Custom CSS
 
-You can load your custom CSS files by adding them under the `static` folder, e.g. `static/css/custom.css` and then defining the parameters as a list:
+You can load your custom CSS files by adding them under the `static` folder, e.g. `static/css/custom.css` and then defining the parameters as a list.
+
+- yaml:
 
 ```yaml
 params:
   custom_css: ["css/custom.css"]
+```
+
+- toml:
+
+```toml
+[params]
+custom_css = ["css/custom.css"]
 ```
 
 ## Website Example
