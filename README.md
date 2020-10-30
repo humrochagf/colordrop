@@ -26,11 +26,11 @@ params:
 
 ## Custom CSS
 
-You can load your custom CSS files by adding them under the `static` folder, e.g. `static/css/custom.css` and then defining the parameters:
+You can load your custom CSS files by adding them under the `static` folder, e.g. `static/css/custom.css` and then defining the parameters as a list:
 
 ```yaml
 params:
-  custom_css: "css/custom.css"
+  custom_css: ["css/custom.css"]
 ```
 
 ## Website Example
