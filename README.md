@@ -15,6 +15,10 @@ Then add it as submodule of your repository:
 ```
 git submodule add git@github.com:humrochagf/colordrop.git themes/colordrop
 ```
+OR
+```
+git submodule add https://github.com/humrochagf/colordrop.git themes/colordrop
+```
 
 And add this configuration to your blog config.
 
