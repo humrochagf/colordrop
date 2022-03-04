@@ -13,7 +13,27 @@
 
       {{ partial "publish" . }}
 
-      <img class="list-image" src="{{ index .Params.images 0 | safeURL }}" alt="{{ .Title }}" title="{{ .Title }}" />
+      {{ if and
+        (ne nil .Params.images)
+        (ne nil (index .Params.images 0))
+      }}
+        <div class="list-image">
+          {{ $image := index .Params.images 0 }}
+          <a href="{{ .Permalink }}">
+            <img
+              src="{{ $image.src | safeURL }}"
+              alt="{{ .Title }}"
+              title="{{ .Title }}"
+            />
+          </a>
+
+          {{ if ne nil $image.attribution }}
+            <div class="attribution">
+              {{ print $image.attribution | safeHTML }}
+            </div>
+          {{ end }}
+        </div>
+      {{ end }}
 
       {{ .Summary }}
     </article>

@@ -38,7 +38,15 @@ main {
   }
 
   article .list-image {
-    width: 100%;
+    img {
+      width: 100%;
+    }
+
+    .attribution {
+      font-size: smaller;
+      text-align: center;
+    }
+
     margin: 0 0 20px;
   }
 
