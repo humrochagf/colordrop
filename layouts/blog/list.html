@@ -21,13 +21,20 @@
           {{ $image := index .Params.images 0 }}
           <a href="{{ .Permalink }}">
             <img
-              src="{{ $image.src | safeURL }}"
+              {{ if reflect.IsMap $image }}
+                src="{{ $image.src | safeURL }}"
+              {{ else }}
+                src="{{ $image | safeURL }}"
+              {{ end }}
               alt="{{ .Title }}"
               title="{{ .Title }}"
             />
           </a>
 
-          {{ if ne nil $image.attribution }}
+          {{ if and
+            (reflect.IsMap $image)
+            (ne nil $image.attribution)
+          }}
             <div class="attribution">
               {{ print $image.attribution | safeHTML }}
             </div>
