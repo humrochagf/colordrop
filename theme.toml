@@ -5,7 +5,7 @@ description = "Customizable, monochromatic and minimalist hugo theme for persona
 homepage = "https://humberto.io/"
 tags = ["blog", "customizable", "monochromatic", "mimimalist"]
 features = ["blog", "tags", "curriculum"]
-min_version = 0.55
+min_version = 0.95
 
 [author]
   name = "Humberto Rocha"
