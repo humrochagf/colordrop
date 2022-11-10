@@ -15,7 +15,7 @@
             </a>
           {{ end }}
         {{ else }}
-          <a href="{{ .URL | absLangURL }}">
+          <a {{ if eq .Name "mastodon" }}rel="me"{{ end }} href="{{ .URL | absLangURL }}">
             {{ partial "svg" .Name }}
           </a>
         {{ end }}
