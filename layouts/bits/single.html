@@ -1,0 +1,22 @@
+{{ define "jsonLD" }}
+{{ end }}
+
+{{ define "headAdditional" }}
+  {{ if .Params.katex }}
+    {{ partial "katex" . }}
+  {{ end }}
+{{ end }}
+
+{{ define "main" }}
+  <article>
+    <h1 class="title">{{ .Title }}</h1>
+
+    {{ partial "publish" . }}
+
+    {{ .Content }}
+
+    {{ partial "license" .Site.Params.license }}
+  </article>
+
+  {{ template "_internal/disqus.html" . }}
+{{ end }}
