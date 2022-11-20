@@ -9,11 +9,7 @@
       <h2 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
 
       {{ partial "publish" . }}
-
-      {{ .Summary }}
     </article>
-
-    <hr>
   {{ end }}
 
   {{ template "_internal/pagination.html" . }}
