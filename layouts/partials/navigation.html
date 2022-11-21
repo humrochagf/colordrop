@@ -2,7 +2,7 @@
   <div class="container">
     <div class="main-navigation">
       {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}<a href="{{ .URL | relLangURL }}" {{ if $currentPage.IsMenuCurrent "main" . }}class="active"{{ end }}>{{ .Name }}</a>{{ end }}
+      {{ range .Site.Menus.main }}<a href="{{ .URL | relLangURL }}" {{ if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}class="active"{{ end }}>{{ .Name }}</a>{{ end }}
     </div>
   </div>
 </nav>
