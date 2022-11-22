@@ -42,5 +42,9 @@
 
     {{ block "footerJS" . }}
     {{ end }}
+
+    {{ if (findRE "<pre" .Content 1) }}
+      <script src="/copy/copy.js"></script>
+    {{ end }}
   </body>
 </html>

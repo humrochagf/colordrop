@@ -31,3 +31,39 @@ code > span > span {
     }
   }
 }
+
+.clipboard-button {
+  position: absolute;
+  right: 0;
+  margin: 5px;
+  font-size: 0.8em;
+  z-index: 1;
+
+  opacity: 0.3;
+  transition: 0.1s;
+}
+
+.clipboard-button svg {
+  fill: #c1c1c1;
+}
+
+.clipboard-button:hover {
+  cursor: pointer;
+}
+
+.clipboard-button:hover svg {
+  fill: #ffffff;
+}
+
+.clipboard-button:focus {
+  outline: 0;
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight:hover .clipboard-button {
+  opacity: 1;
+  transition: 0.2s;
+}
