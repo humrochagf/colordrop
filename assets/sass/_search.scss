@@ -1,0 +1,29 @@
+.search {
+  padding-top: 10px;
+  text-align: center;
+
+  input {
+    width: 180px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid lighten($theme-color, 70%);
+
+    &:hover, &:focus, &:active, &.active {
+      outline: none;
+      border-bottom: 1px solid $theme-color;
+    }
+  }
+}
+
+.search-results-container {
+  margin: 0 -15px;
+  padding: 25px;
+  position: absolute;
+  z-index: 1;
+  background-color: $theme-inverse-color;
+
+  .search-results {
+    overflow-y: auto;
+    height: 250px;
+  }
+}

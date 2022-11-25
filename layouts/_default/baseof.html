@@ -26,6 +26,7 @@
         {{ partial "language" . }}
         {{ partial "header" . }}
         {{ partial "navigation" . }}
+        {{ partial "search" . }}
 
         <main>
           <div class="container">
@@ -46,5 +47,11 @@
     {{ if (findRE "<pre" .Content 1) }}
       <script src="/copy/copy.js"></script>
     {{ end }}
+
+    <script src="/search/elasticlunr.min.js"></script>
+    <script src="/search/search.js"></script>
+    <script>
+      loadSearch({{ with .Site.GetPage "/" }}{{ with .OutputFormats.Get "json" }}'{{ .Permalink }}'{{ end }}{{ end }});
+    </script>
   </body>
 </html>
