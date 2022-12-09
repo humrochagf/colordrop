@@ -29,26 +29,28 @@ function loadSearch(url, inputId="searchInput") {
       }
     });
 
-    const articles = [];
+    const links = [];
     results.forEach((result) => {
-      const article = document.createElement("article");
-
       const title = document.createElement("h2");
-      const link = document.createElement("a");
-      link.innerHTML = result.doc.title;
-      link.href = result.doc.link;
-      title.appendChild(link);
-      article.appendChild(title);
+      title.innerHTML = result.doc.title;
 
       const content = document.createElement("p");
       content.innerHTML = result.doc.content.substring(0, 200) + "...";
+
+      const article = document.createElement("article");
+      article.appendChild(title);
       article.appendChild(content);
 
-      articles.push(article);
+      const link = document.createElement("a");
+      link.href = result.doc.link;
+      link.tabIndex = 0;
+      link.appendChild(article);
+
+      links.push(link);
     });
 
     if (results.length > 0) {
-      searchResults.replaceChildren(...articles);
+      searchResults.replaceChildren(...links);
       searchResults.parentElement.hidden = false;
     } else {
       searchResults.innerHTML = "";
