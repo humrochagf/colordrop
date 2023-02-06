@@ -111,6 +111,10 @@ main {
     padding: 15px 20px;
     color: darken($color, 60%);
 
+    p:last-child {
+      margin-bottom: 0;
+    }
+
     a {
       border-bottom: 1px solid darken($color, 30%);
 
