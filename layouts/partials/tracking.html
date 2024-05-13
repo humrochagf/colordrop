@@ -1,0 +1,3 @@
+{{ if .Site.Params.tracking }}
+  <script defer src="{{ .Site.Params.tracking.domain }}/script.js" data-website-id="{{ .Site.Params.tracking.websiteId }}"></script>
+{{ end }}
