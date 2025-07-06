@@ -1,7 +1,13 @@
 baseURL: https://example.com
 languageCode: en-us
 title: Colordrop Theme
-theme: colordrop
+
+markup:
+  highlight:
+    style: catppuccin-mocha
+  goldmark:
+    renderer:
+      unsafe: true
 
 author:
   name: Author Name
@@ -54,7 +60,7 @@ menu:
       weight: 7
 
 params:
-  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis velit luctus felis tristique eleifend. Maecenas suscipit orci eget metus eleifend lobortis in vitae nisl. Nulla ultrices blandit diam, non. 
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis velit luctus felis tristique eleifend. Maecenas suscipit orci eget metus eleifend lobortis in vitae nisl. Nulla ultrices blandit diam, non.
   siteLogo: profile.png
   themeColor: "#000000"
   themeInverseColor: "#ffffff"

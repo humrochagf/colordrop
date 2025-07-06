@@ -14,5 +14,4 @@ languages:
 techSkills:
 softSkills:
 openSource:
-
 ---
