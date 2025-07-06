@@ -6,5 +6,4 @@ slug:
 tags:
 images:
 aliases:
-
 ---

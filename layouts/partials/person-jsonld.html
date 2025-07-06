@@ -1,16 +1,16 @@
 {
   "@context": "http://schema.org/",
   "@type": "Person",
-  "name": "{{ .Site.Author.name }}",
+  "name": "{{ .Site.Params.Author.name }}",
   {{ with .Site.GetPage "/about" }}
     "url": "{{ .Permalink }}",
   {{ end }}
-  "jobTitle": "{{ .Site.Author.job }}",
-  "gender": "{{ .Site.Author.gender }}",
-  "image": "{{ .Site.Author.image | absURL }}",
+  "jobTitle": "{{ .Site.Params.Author.job }}",
+  "gender": "{{ .Site.Params.Author.gender }}",
+  "image": "{{ .Site.Params.Author.image | absURL }}",
   "sameAs": [
-    "https://github.com/{{ .Site.Author.github }}/",
-    "https://twitter.com/{{ .Site.Author.twitter }}/",
-    "https://www.linkedin.com/in/{{ .Site.Author.linkedin }}/"
+    "https://github.com/{{ .Site.Params.Author.github }}/",
+    "https://twitter.com/{{ .Site.Params.Author.twitter }}/",
+    "https://www.linkedin.com/in/{{ .Site.Params.Author.linkedin }}/"
   ]
 }

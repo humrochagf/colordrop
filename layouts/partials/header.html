@@ -4,7 +4,9 @@
       <div class="header-logo-container">
         <a class="header-logo-link" href="{{ "/" | absLangURL }}">
           {{ if .Site.Params.siteLogo }}
-            <img class="header-logo-circle" src="{{ .Site.Params.siteLogo | absURL }}" alt="{{ .Site.Title }} logo">
+          <img class="header-logo-circle"
+               src="{{ default .Site.Params.siteLogo "img/profile.png" | absURL }}"
+               alt="{{ .Site.Title }} logo">
           {{ end }}
         </a>
       </div>

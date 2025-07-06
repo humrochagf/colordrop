@@ -1,3 +1,19 @@
-{{ if .Site.Params.tracking }}
-  <script defer src="{{ .Site.Params.tracking.domain }}/script.js" data-website-id="{{ .Site.Params.tracking.websiteId }}"></script>
-{{ end }}
+{{- if .Site.Params.tracking -}}
+  {{- /* Rybbit Analytics */ -}}
+  {{- with .Site.Params.tracking.rybbit.dataSiteId -}}
+    <script
+      src="{{ .Site.Params.tracking.rybbit.src }}"
+      data-site-id="{{ . }}"
+      defer
+      ></script>
+  {{- end -}}
+
+  {{- /* Umami Analytics */ -}}
+  {{- with .Site.Params.tracking.umami.dataWebsiteId -}}
+    <script
+      src="{{ .Site.Params.tracking.umami.src }}"
+      data-website-id="{{ . }}"
+      defer
+      ></script>
+  {{- end -}}
+{{- end -}}

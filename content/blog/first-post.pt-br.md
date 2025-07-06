@@ -2,8 +2,6 @@
 title: Primeiro Post
 description: Post de apresentação do Blog
 publishDate: 2016-04-21
-images:
-  - /profile.png
 tags: ["python", "coding", "presentation"]
 draft: false
 
