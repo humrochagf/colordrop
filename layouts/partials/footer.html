@@ -1,25 +1,25 @@
 <footer>
   <div class="container">
     <div class="footer-navigation">
-      {{ $rssPage := .OutputFormats.Get "rss" }}
+      {{- $rssPage := .OutputFormats.Get "rss" -}}
 
-      {{ range .Site.Menus.footer }}
-        {{ if eq .Name "rss" }}
-          {{ if $rssPage }}
+      {{- range .Site.Menus.footer -}}
+        {{- if eq .Name "rss" -}}
+          {{- if $rssPage -}}
             <a href="{{ $rssPage.Permalink }}">
-              {{ partial "svg" .Name }}
+              {{- partial "svg" .Name -}}
             </a>
-          {{ else }}
+          {{- else }}
             <a href="{{ "blog/index.xml" | absLangURL }}">
-              {{ partial "svg" .Name }}
+              {{- partial "svg" .Name -}}
             </a>
-          {{ end }}
-        {{ else }}
+          {{- end -}}
+        {{- else -}}
           <a {{ if eq .Name "mastodon" }}rel="me"{{ end }} href="{{ .URL | absLangURL }}">
-            {{ partial "svg" .Name }}
+            {{- partial "svg" .Name -}}
           </a>
-        {{ end }}
-      {{ end }}
+        {{- end -}}
+      {{- end -}}
     </div>
   </div>
 

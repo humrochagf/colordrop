@@ -2,11 +2,11 @@
   <div class="container">
     <div class="language-selector">
       {{ if .IsTranslated }}
-        {{ range .Translations }}
+        {{- range .Translations -}}
           <a class="language-item" href="{{ .Permalink }}">
-            {{ .Language.Lang }}
+            {{- .Language.Lang -}}
           </a>
-        {{ end }}
+        {{- end -}}
       {{ end }}
     </div>
   </div>
