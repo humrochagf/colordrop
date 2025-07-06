@@ -1,18 +1,18 @@
 {{- if .Site.Params.tracking -}}
   {{- /* Rybbit Analytics */ -}}
-  {{- with .Site.Params.tracking.rybbit.dataSiteId -}}
+  {{- with .Site.Params.tracking.rybbit -}}
     <script
-      src="{{ .Site.Params.tracking.rybbit.src }}"
-      data-site-id="{{ . }}"
+      src="{{ .src }}"
+      data-site-id="{{ .dataSiteId }}"
       defer
       ></script>
   {{- end -}}
 
   {{- /* Umami Analytics */ -}}
-  {{- with .Site.Params.tracking.umami.dataWebsiteId -}}
+  {{- with .Site.Params.tracking.umami -}}
     <script
-      src="{{ .Site.Params.tracking.umami.src }}"
-      data-website-id="{{ . }}"
+      src="{{ .src }}"
+      data-website-id="{{ .dataWebsiteId }}"
       defer
       ></script>
   {{- end -}}
