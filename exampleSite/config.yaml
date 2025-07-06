@@ -61,7 +61,7 @@ menu:
 
 params:
   description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis velit luctus felis tristique eleifend. Maecenas suscipit orci eget metus eleifend lobortis in vitae nisl. Nulla ultrices blandit diam, non.
-  siteLogo: profile.png
+  siteLogo: img/profile.png
   themeColor: "#000000"
   themeInverseColor: "#ffffff"
 
