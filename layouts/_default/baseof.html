@@ -7,7 +7,7 @@
     {{ end }}
 
     <!-- Page title -->
-    <title>{{ .Title }} - {{ .Site.Title }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
 
     <!-- styles -->
     {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | css.Sass | resources.Minify | resources.Fingerprint }}
