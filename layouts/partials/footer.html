@@ -36,4 +36,8 @@
 
     <a href="https://humberto.io/"><b>Humberto Rocha</b></a>
   </p>
+
+  {{- if templates.Exists "partials/extend_footer.html" -}}
+    {{- partial "extend_footer.html" . -}}
+  {{- end -}}
 </footer>
