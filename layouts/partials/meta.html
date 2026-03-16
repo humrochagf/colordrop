@@ -40,3 +40,27 @@
 <!-- Twitter -->
 {{ template "_internal/twitter_cards.html" . }}
 <meta name="twitter:creator" content="@{{ .Site.Params.Author.twitter }}" />
+
+<!-- Pagefind -->
+
+{{ if and
+  (ne nil .Params.images)
+  (ne nil (index .Params.images 0))
+}}
+  {{ $image := index .Params.images 0 }}
+  <meta
+    data-pagefind-default-meta="image[content]"
+    {{ if reflect.IsMap $image }}
+      content="{{ $image.src | safeURL }}"
+    {{ else }}
+      content="{{ $image | safeURL }}"
+    {{ end }}
+    property="og:image"
+  />
+{{ else }}
+  <meta
+    data-pagefind-default-meta="image[content]"
+    content="{{ .Site.Params.siteLogo | absURL }}"
+    property="og:image"
+  />
+{{ end }}

@@ -11,8 +11,8 @@
 {{ end }}
 
 {{ define "main" }}
-  <article>
-    <h1 class="title">{{ .Title }}</h1>
+  <article data-pagefind-body>
+    <h1 class="title" data-pagefind-meta="title">{{ .Title }}</h1>
 
     {{ partial "publish" . }}
 

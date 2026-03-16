@@ -111,6 +111,16 @@ description = "Welcome to my blog..."
 siteLogo = "logo-photo.png"
 ```
 
+## Search
+
+The search feature is powered by [pagefind](https://pagefind.app/)
+
+Make sure you have the pagefind generation step after you run hugo build to be able to generate the search index.
+
+```
+npx -y pagefind --site public
+```
+
 ## Custom CSS
 
 You can load your custom CSS files by adding them under the `static` folder, e.g. `static/css/custom.css` and then defining the parameters as a list.

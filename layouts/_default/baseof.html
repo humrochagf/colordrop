@@ -10,6 +10,7 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} - {{ .Site.Title }}{{ end }}</title>
 
     <!-- styles -->
+    <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
     {{ $style := resources.Get "sass/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | css.Sass | resources.Minify | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
     {{ range .Site.Params.custom_css -}}
@@ -26,7 +27,10 @@
         {{ partial "language" . }}
         {{ partial "header" . }}
         {{ partial "navigation" . }}
-        {{ partial "search" . }}
+
+        <div class="container">
+          <div id="search"></div>
+        </div>
 
         <main>
           <div class="container">
@@ -48,10 +52,11 @@
       <script src="/copy/copy.js"></script>
     {{ end }}
 
-    <script src="/search/elasticlunr.min.js"></script>
-    <script src="/search/search.js"></script>
+    <script src="/pagefind/pagefind-ui.js"></script>
     <script>
-      loadSearch({{ with .Site.GetPage "/" }}{{ with .OutputFormats.Get "json" }}'{{ .Permalink }}'{{ end }}{{ end }});
+        window.addEventListener('DOMContentLoaded', (event) => {
+            new PagefindUI({ element: "#search", showSubResults: true });
+        });
     </script>
   </body>
 </html>
