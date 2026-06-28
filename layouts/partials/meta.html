@@ -13,11 +13,11 @@
 
 <!-- SEO tags -->
 <link rel="canonical" href="{{ .Permalink }}" />
-<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.Label }}">
 
 {{ if .IsTranslated }}
   {{ range .Translations }}
-    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.Label }}">
   {{ end }}
 {{ end }}
 
