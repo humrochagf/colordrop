@@ -28,6 +28,7 @@
   {{ end }}
 
   <p class="made-with-love">
+    <span>Powered by</span><br/>
     <a href="https://github.com/humrochagf/colordrop">
       <b>Colordrop</b>
     </a>
@@ -36,4 +37,8 @@
 
     <a href="https://humberto.io/"><b>Humberto Rocha</b></a>
   </p>
+
+  {{- if templates.Exists "partials/extend_footer.html" -}}
+    {{- partial "extend_footer.html" . -}}
+  {{- end -}}
 </footer>
